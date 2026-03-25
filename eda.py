@@ -59,7 +59,7 @@ def process_data():
     # ----------------------
     # TREND
     # ----------------------
-    df["date"] = pd.date_range(start="2023-01-01", periods=len(df), freq="H")
+    df["date"] = pd.date_range(start="2023-01-01", periods=len(df), freq="h")
 
     monthly = df.groupby(df["date"].dt.to_period("M"))["Amount"].sum()
 
